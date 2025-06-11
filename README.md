@@ -1,2 +1,0 @@
-# Pixelwise
-Tracking tech consulting
