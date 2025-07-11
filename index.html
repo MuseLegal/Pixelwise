@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pixelwise</title>
+  <title>Pixelwise Consulting</title>
   <style>
     body {
       margin: 0;
@@ -37,6 +37,15 @@
       margin-right: 8px;
       font-size: 20px;
     }
+    .nav-cta a {
+      background: linear-gradient(to right, purple, red);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
     .hero {
       padding: 120px 32px 100px;
       text-align: center;
@@ -61,15 +70,6 @@
       max-width: 600px;
       margin: 0 auto 30px;
     }
-    .hero .cta {
-      font-size: 18px;
-      padding: 14px 24px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(to right, purple, red);
-      color: white;
-      cursor: pointer;
-    }
     .blob {
       position: absolute;
       width: 500px;
@@ -80,25 +80,120 @@
     }
     .blob1 { top: -100px; left: -100px; background: rgba(255, 0, 150, 0.15); }
     .blob2 { bottom: -100px; right: -100px; background: rgba(255, 215, 0, 0.15); }
-    .features {
+
+    section {
       padding: 60px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
       text-align: center;
     }
-    .features div {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .features h3 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-    .features p {
+    section p {
       font-size: 18px;
-      color: #555;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
     }
+    .columns {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .columns > div {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid purple;
+      border-radius: 6px;
+    }
+    .columns h4 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .feature {
+      flex: 1 1 280px;
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .feature h4 {
+      margin-top: 10px;
+    }
+
+    .bars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .bar {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, purple, red);
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .scoreboard {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .score {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 220px;
+      text-align: center;
+    }
+    .score strong {
+      font-size: 28px;
+      display: block;
+      color: purple;
+    }
+
+    .cta-banner {
+      text-align: center;
+      padding: 60px 32px;
+      background: linear-gradient(to right, purple, red);
+      color: white;
+    }
+    .cta-banner h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .cta-banner a {
+      background: white;
+      color: purple;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
     footer {
       background: #111;
       color: white;
@@ -117,33 +212,81 @@
 
   <nav>
     <h1><span>P</span>Pixelwise</h1>
-    <div>
-      <a href="#features" style="margin-right:20px; text-decoration:none; color:#333;">Features</a>
-      <a href="#pricing" style="text-decoration:none; color:#333;">Pricing</a>
+    <div class="nav-cta">
+      <a href="https://calendly.com/yourname/pixelwise-chat" target="_blank">Request Chat</a>
     </div>
   </nav>
 
   <section class="hero">
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
-    <h2>Scan. Comply. <span>Relax.</span></h2>
-    <p>Pixelwise scans your site for trackers and cookies, flags privacy risks, and helps you stay compliant with HIPAA, FTC, and state laws.</p>
-    <button class="cta">Run Free Scan</button>
+    <h2>Tracking Tech, <span>Strategically</span></h2>
+    <p>Pixelwise is a consulting firm helping digital-first companies design compliant, effective strategies for using tracking technologies—without getting burned.</p>
   </section>
 
-  <section class="features" id="features">
-    <div>
-      <h3>🧠 Smart Detection</h3>
-      <p>Automatically identifies tracking pixels, cookies, and embedded scripts across your site.</p>
+  <section>
+    <h3>What We Offer</h3>
+    <p>Legal clarity meets digital performance. Here’s how we help teams ship with confidence.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <div>📦</div>
+        <h4>Tracker Stack Audits</h4>
+        <p>Full reviews of current trackers, usage, and legal exposure.</p>
+      </div>
+      <div class="feature">
+        <div>🧾</div>
+        <h4>Policy Mapping</h4>
+        <p>Ensure your external and internal policies match how data is actually used.</p>
+      </div>
+      <div class="feature">
+        <div>🔐</div>
+        <h4>HIPAA-FTC Compliance</h4>
+        <p>Built for regulated industries. Our guidance holds up under scrutiny.</p>
+      </div>
+      <div class="feature">
+        <div>📈</div>
+        <h4>Marketing Enablement</h4>
+        <p>Get compliant without killing performance metrics.</p>
+      </div>
     </div>
-    <div>
-      <h3>📊 Instant Reports</h3>
-      <p>Download professional reports with legal insights based on HIPAA, MHMD, CPRA, and FTC guidance.</p>
+  </section>
+
+  <section>
+    <h3>Common Risk Areas</h3>
+    <p>How are clients scoring across key compliance touchpoints?</p>
+    <div class="bars">
+      <div class="bar"><div class="bar-fill" style="width: 60%;">Cookie Policy Accuracy (60%)</div></div>
+      <div class="bar"><div class="bar-fill" style="width: 40%;">BAA Coverage for Trackers (40%)</div></div>
+      <div class="bar"><div class="bar-fill" style="width: 70%;">Vendor Contract Gaps (70%)</div></div>
+      <div class="bar"><div class="bar-fill" style="width: 85%;">Ad Retargeting Compliance (85%)</div></div>
     </div>
-    <div>
-      <h3>🔒 Built for Privacy</h3>
-      <p>Designed by privacy attorneys and adtech experts—Pixelwise puts compliance first.</p>
+  </section>
+
+  <section>
+    <h3>Compliance Score Snapshot</h3>
+    <div class="scoreboard">
+      <div class="score">
+        <strong>76%</strong>
+        Overall Risk Reduction
+      </div>
+      <div class="score">
+        <strong>5x</strong>
+        Faster Legal Review
+      </div>
+      <div class="score">
+        <strong>3</strong>
+        High-Risk Vendors Replaced
+      </div>
+      <div class="score">
+        <strong>100%</strong>
+        HIPAA Consent Alignment
+      </div>
     </div>
+  </section>
+
+  <section class="cta-banner">
+    <h3>Need to untangle your trackers?</h3>
+    <a href="https://calendly.com/yourname/pixelwise-chat" target="_blank">Book a Free Strategy Call</a>
   </section>
 
   <footer>
@@ -151,7 +294,7 @@
       <a href="#">Privacy Policy</a> |
       <a href="#">Terms of Service</a>
     </p>
-    <p style="margin-top:10px;">&copy; 2025 Pixelwise. All rights reserved.</p>
+    <p style="margin-top:10px;">&copy; 2025 Pixelwise Consulting. All rights reserved.</p>
   </footer>
 
 </body>
